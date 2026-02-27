@@ -132,3 +132,31 @@ main {
     border-radius: 6px;
     color: #fff;
 }
+
+.footer-link {
+    position: relative;
+    text-decoration: none;
+    color: #cbd5e1;
+    margin: 0 15px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.footer-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0%;
+    height: 2px;
+    background: #7c3aed;
+    transition: 0.3s;
+}
+
+.footer-link:hover {
+    color: #ffffff;
+}
+
+.footer-link:hover::after {
+    width: 100%;
+}
