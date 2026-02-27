@@ -1,0 +1,46 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #0f172a;
+    color: #fafafa;
+    margin: 0;
+    text-align: center;
+}
+
+header {
+    padding: 40px;
+    background: linear-gradient(135deg, #2563eb, #7c3aed);
+}
+
+main {
+    display: grid;
+    gap: 20px;
+    padding: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.repo-card {
+    background: #1e293b;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: left;
+    transition: 0.3s;
+}
+
+.repo-card:hover {
+    transform: translateY(-5px);
+    background: #334155;
+}
+
+.repo-card h3 {
+    margin: 0 0 10px;
+}
+
+.repo-card a {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    background: #7c3aed;
+    padding: 6px 12px;
+    border-radius: 6px;
+    color: #fff;
+}
