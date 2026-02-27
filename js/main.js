@@ -1,4 +1,4 @@
-const username = "twojanazwa"; // tutaj podstaw swój GitHub login
+const username = "hadesto92";
 
 async function loadGitHubRepos() {
     const container = document.getElementById("projects-container");
