@@ -11,7 +11,7 @@ body {
 }
 
 header {
-    padding: 60px 20;
+    padding: 40px;
     text-align:center;
     background: linear-gradient(135deg, #2563eb, #7c3aed);
 }
@@ -159,6 +159,19 @@ main {
 
 .footer-link:hover::after {
     width: 100%;
+}
+
+.playButton {
+    font-size: xx-large;
+    text-align: left;
+    transition: 0.3s;
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    background: #7c3aed;
+    padding: 6px 12px;
+    border-radius: 6px;
+    color: #fff;
 }
 
 .modal {
