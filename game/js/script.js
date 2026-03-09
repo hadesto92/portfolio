@@ -2,7 +2,7 @@ const symbols = ['♠', '♣', '♥', '♦'];
 const values = ['9', '10', 'J', 'Q', 'K', 'A'];
 let deck = [];
 
-let maxCARD = 5;
+let maxCARD = 6;
 
 let hand = Array(maxCARD).fill(null); // Miejsce na 6 kart
 
