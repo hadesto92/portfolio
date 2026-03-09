@@ -28,17 +28,27 @@ const categories = [
 
 function initCategories() {
     const container = document.getElementById('category-buttons');
-    const br = document.createElement('br');
+    const br = document.createElement('br'); 
     container.innerHTML = '<br>';
     categories.forEach((cat, index) => {
         const btn = document.createElement('button');
         btn.className = 'information-containter-btn';
         btn.innerText = cat.name;
         btn.disabled = cat.used;
+        btn.style.color = setDiasbleButton(cat);
         btn.onclick = () => selectCategory(index);
         container.appendChild(btn);
         container.append(document.createElement('br'));
     });
+}
+
+function setDiasbleButton(buttonCategory){
+    if (buttonCategory.used){
+        return "grey";
+    }
+    else{
+        return "black";
+    }
 }
 
 function getPioints(categoryName){
