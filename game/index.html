@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Poker Card</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="game-wrapper">
+            <header class="top-bar">
+                <h1>Poker Card</h1>
+                <div class="game-info">
+                    <div id="round-info"></div>
+                    <div id="scoreboard"></div>
+                </div>
+            </header>
+            <main class="table-area">
+                <div class="deck-area">
+                    <div id="deck-pile" class="deck"></div>
+                </div>
+                <div id="hand-container" class="hand"></div>
+                <div class="controls">
+                    <button id="draw-btn" onclick="handleDraw()">LOSUJ</button>
+                    <button id="reset-btn" onclick="restartGame()">RESET</button>
+                </div>
+            </main>
+            <aside class="categories-panel">
+                <h2>Kategorie</h2>
+                <div id="category-buttons"></div>
+            </aside>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
