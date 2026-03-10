@@ -17,7 +17,7 @@ const categories = [
     { name: "9", used: false },
     { name: "10", used: false },
     { name: "J", used: false },
-    { name: "D", used: false },
+    { name: "Q", used: false },
     { name: "K", used: false },
     { name: "A", used: false },
     { name: "3", used: false },
@@ -53,7 +53,7 @@ function setDiasbleButton(buttonCategory){
 
 function getPioints(categoryName){
     let points = 0;
-    const valuesMap = { 'J': 11, 'D': 12, 'K': 13, 'A': 14 };
+    const valuesMap = { 'J': 11, 'Q': 12, 'K': 13, 'A': 14 };
     
     const handValues = hand.filter(c => c.selected === true).map(c => c.v);
     const handCounts = {};
@@ -69,13 +69,13 @@ function getPioints(categoryName){
         case '9': points = (handCounts[9] || 0) * 9; break;
         case '10': points = (handCounts[10] || 0) * 10; break;
         case 'J': points = (handCounts[11] || 0) * 11; break;
-        case 'D': points = (handCounts[12] || 0) * 12; break;
+        case 'Q': points = (handCounts[12] || 0) * 12; break;
         case 'K': points = (handCounts[13] || 0) * 13; break;
         case 'A': points = (handCounts[14] || 0) * 14; break;
         case '3': const tripleValue = Object.keys(handCounts).find(v => handCounts[v] >= 3); points = tripleValue ? (valuesMap[tripleValue] || parseInt(tripleValue)) * 3 : 0; break;
         case '4': points = Object.values(handCounts).some(c => c === 4) ? handValues.reduce((sum, v) => sum + (valuesMap[v] || parseInt(v)), 0) : 0; break;
-        case '10-A': points = handValues.every(v => ['10','J','D','K','A'].includes(v)) ? 40 : 0; break;
-        case '9-K': points = handValues.every(v => ['9','10','J','D','K'].includes(v)) ? 20 : 0; break;
+        case '10-A': points = handValues.every(v => ['10','J','Q','K','A'].includes(v)) ? 40 : 0; break;
+        case '9-K': points = handValues.every(v => ['9','10','J','Q','K'].includes(v)) ? 20 : 0; break;
     }
 
     return points;
